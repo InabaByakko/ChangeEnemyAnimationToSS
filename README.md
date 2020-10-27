@@ -87,13 +87,22 @@ https://github.com/InabaByakko/ChangeActorBattleAnimationToSsPlayer#%E8%87%AA%E4
     * 1モーションを1ファイルで出力**した**場合
         * ![image](https://user-images.githubusercontent.com/3094590/94986284-6e61c080-0598-11eb-9fe9-e3131bc35a13.png)
 
+1. 使用する依存プラグインごとに、次の手順を実行してください。
+    * YEP_AnimatedSVEnemies を使用する場合
+        1. 「データベース」の「敵キャラ」で、メモ欄に「`<Sideview Battler: JSONファイル名の.jsonを抜いた名前>`」を入力します。
+    * AnimatedSVEnemies (Rexal)　を使用する場合
+        1. グラフィックフォルダ「enemies」「sv_enemies」「sv_actors」に、上の手順で配置したJSONファイル名の .json を .png に変えたダミー画像を作成します。
 
-1. サイドビュー用アクターグラフィックフォルダ「sv_actors」に、上の手順で配置したJSONファイル名の .json を .png に変えたダミー画像を作成します。
+        1. 「データベース」の「敵キャラ」で、"画像" を、上の手順で配置したダミー画像に設定します。
 
-1. 「データベース」の「アクター」で、"[SV]戦闘キャラ" を、上の手順で配置したダミー画像に設定します。
-
-2. 「データベース」の「システム」タブで「サイドビュー戦闘を使用」にチェックを入れます。   
-
+        1. 「メモ」覧に「`[SV Animated]`」を入力します。
+    * VisuMZ_1_BattleCore を使用する場合
+        1. 「データベース」の「敵キャラ」で、メモ欄に次のように入力します。
+            ```
+            <Sideview Battlers>
+            JSONファイル名の.jsonを抜いた名前
+            </Sideview Battlers>
+            ```
 3. お楽しみください。  
     
 ## バグを見つけた場合
